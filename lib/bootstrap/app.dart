@@ -92,7 +92,10 @@ class AppBuild extends StatelessWidget {
               darkTheme: darkTheme ?? ThemeConfig.dark().theme,
               initialRoute: initialRoute,
               onGenerateRoute: onGenerateRoute,
-              theme: themeData ?? ThemeProvider.themeOf(context).data,
+              theme: ThemeData(
+                  useMaterial3: true,
+                  colorScheme:
+                      ColorScheme.fromSeed(seedColor: Colors.blueAccent)),
               localeResolutionCallback:
                   (Locale? locale, Iterable<Locale> supportedLocales) {
                 return locale;
