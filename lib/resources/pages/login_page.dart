@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/app/controllers/login_controller.dart';
-import 'package:flutter_app/bootstrap/helpers.dart';
-import 'package:flutter_app/resources/widgets/safearea_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import 'package:nylo_framework/theme/helper/ny_theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginPage extends NyStatefulWidget {
   final LoginController controller = LoginController();
@@ -64,25 +62,40 @@ class _LoginPageState extends NyState<LoginPage> {
                   ),
                 ],
               ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Center(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          getEnv("APP_NAME"),
+                          style: textTheme.headline2,
+                        ),
+                        TextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            labelText: 'Usuário',
+                            prefixIcon: Icon(Icons.person_outline),
+                            labelStyle: TextStyle(),
+                          ),
+                        ),
+                        TextFormField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            labelText: 'Senha',
+                            prefixIcon: Icon(Icons.lock_outline),
+                            labelStyle: TextStyle(),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
               Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Usuário',
-                        prefixIcon: Icon(Icons.person_outline),
-                        labelStyle: TextStyle(),
-                      ),
-                    ),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: 'Senha',
-                        prefixIcon: Icon(Icons.lock_outline),
-                        labelStyle: TextStyle(),
-                      ),
-                    ),
                     SizedBox(
                       height: 10,
                     ),
@@ -101,7 +114,7 @@ class _LoginPageState extends NyState<LoginPage> {
                         children: <Widget>[
                           TextButton.icon(
                             onPressed: () {
-                              // Respond to button press
+                              Navigator.pushNamed(context, '/register_page');
                             },
                             icon: Icon(
                               Icons.circle,
@@ -112,7 +125,8 @@ class _LoginPageState extends NyState<LoginPage> {
                           ),
                           TextButton.icon(
                             onPressed: () {
-                              // Respond to button press
+                              Navigator.pushNamed(
+                                  context, '/forgot_password_page');
                             },
                             icon: Icon(Icons.circle,
                                 size: 8, color: Colors.blueGrey),
@@ -125,7 +139,8 @@ class _LoginPageState extends NyState<LoginPage> {
                         children: <Widget>[
                           ElevatedButton.icon(
                             onPressed: () {
-                              // Respond to button press
+                              //navigator to url
+                              launchUrl(Uri.parse("https://acesso.gov.br/"));
                             },
                             icon: Icon(Icons.accessibility, size: 18),
                             label: Text("Entrar com a conta gov.br"),

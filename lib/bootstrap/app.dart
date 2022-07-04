@@ -95,7 +95,7 @@ class AppBuild extends StatelessWidget {
               theme: ThemeData(
                   useMaterial3: true,
                   colorScheme:
-                      ColorScheme.fromSeed(seedColor: Colors.blueAccent)),
+                      ColorScheme.fromSeed(seedColor: Color(0xFF3980C3))),
               localeResolutionCallback:
                   (Locale? locale, Iterable<Locale> supportedLocales) {
                 return locale;
