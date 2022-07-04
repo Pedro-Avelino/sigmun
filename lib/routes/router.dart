@@ -1,5 +1,7 @@
 import 'package:flutter_app/resources/pages/login_page.dart';
+import 'package:flutter_app/resources/pages/home_page.dart';
 import 'package:nylo_framework/nylo_framework.dart';
+import 'package:page_transition/page_transition.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ appRouter() => nyRoutes((router) {
       router.route("/", (context) => LoginPage(title: ""));
 
       // Add your routes here
+
+      router.route("/home_page", (context) => HomePage(),
+          transition: PageTransitionType.fade);
 
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
     });

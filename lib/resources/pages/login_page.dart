@@ -22,26 +22,47 @@ class _LoginPageState extends NyState<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeAreaWidget(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("public/assets/images/background.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(
-                height: 80,
-              ),
-              Image.asset(
-                getImageAsset("pmm_logo.png"),
-                height: 100,
-                width: 100,
-              ),
-              Text(
-                "ENTRAR",
-                style: textTheme.headline3,
-              ),
-              SizedBox(
-                height: 30,
+              Stack(
+                children: [
+                  Image(
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.fill,
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    image: AssetImage("public/assets/images/foto_teatro.png"),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFF3980C3).withOpacity(0.75),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                  ),
+                  Positioned(
+                    top: MediaQuery.of(context).size.height * 0.2 - 60,
+                    left: MediaQuery.of(context).size.width / 2 - 75,
+                    child: Image(
+                      width: 150,
+                      image:
+                          AssetImage("public/assets/images/logo_pmm_nova.png"),
+                    ),
+                  ),
+                ],
               ),
               Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,6 +76,7 @@ class _LoginPageState extends NyState<LoginPage> {
                       ),
                     ),
                     TextFormField(
+                      obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Senha',
                         prefixIcon: Icon(Icons.lock_outline),
@@ -66,7 +88,7 @@ class _LoginPageState extends NyState<LoginPage> {
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
-                        // Respond to button press
+                        Navigator.pushNamed(context, '/home_page');
                       },
                       icon: Icon(Icons.login, size: 22),
                       style: ButtonStyle(),
@@ -101,7 +123,7 @@ class _LoginPageState extends NyState<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          OutlinedButton.icon(
+                          ElevatedButton.icon(
                             onPressed: () {
                               // Respond to button press
                             },
