@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/config/decoders.dart';
-import 'package:flutter_app/config/events.dart';
-import 'package:flutter_app/config/theme.dart';
-import 'package:flutter_app/resources/themes/styles/base_styles.dart';
+import 'package:sigmun/config/decoders.dart';
+import 'package:sigmun/config/events.dart';
+import 'package:sigmun/config/theme.dart';
+import 'package:sigmun/resources/themes/styles/base_styles.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
 // Add your helper methods here
@@ -26,7 +26,9 @@ extension ColorsHelper on TextStyle {
 }
 
 /// API helper
-api<T>(dynamic Function(T) request, {BuildContext? context}) async => await nyApi<T>(request: request, apiDecoders: apiDecoders, context: context);
+api<T>(dynamic Function(T) request, {BuildContext? context}) async =>
+    await nyApi<T>(
+        request: request, apiDecoders: apiDecoders, context: context);
 
 /// Event helper
 event<T>({Map? data}) async => nyEvent<T>(params: data, events: events);

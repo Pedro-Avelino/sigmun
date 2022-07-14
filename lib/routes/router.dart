@@ -1,5 +1,5 @@
-import 'package:flutter_app/resources/pages/login_page.dart';
-import 'package:flutter_app/resources/pages/home_page.dart';
+import 'package:sigmun/resources/pages/login_page.dart';
+import 'package:sigmun/resources/pages/home_page.dart';
 import '../resources/pages/forgot_password_page.dart';
 import '../resources/pages/register_page.dart';
 

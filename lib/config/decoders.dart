@@ -1,5 +1,5 @@
-import 'package:flutter_app/app/models/user.dart';
-import 'package:flutter_app/app/networking/api_service.dart';
+import 'package:sigmun/app/models/user.dart';
+import 'package:sigmun/app/networking/api_service.dart';
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,8 @@ import 'package:flutter_app/app/networking/api_service.dart';
 */
 
 final modelDecoders = {
-  List<User>: (data) => List.from(data).map((json) => User.fromJson(json)).toList(),
+  List<User>: (data) =>
+      List.from(data).map((json) => User.fromJson(json)).toList(),
 
   User: (data) => User.fromJson(data),
 
@@ -37,5 +38,4 @@ final Map<Type, dynamic> apiDecoders = {
   ApiService: ApiService(),
 
   // ...
-
 };

@@ -1,6 +1,6 @@
-import 'package:flutter_app/app/providers/app_provider.dart';
-import 'package:flutter_app/app/providers/event_provider.dart';
-import 'package:flutter_app/app/providers/route_provider.dart';
+import 'package:sigmun/app/providers/app_provider.dart';
+import 'package:sigmun/app/providers/event_provider.dart';
+import 'package:sigmun/app/providers/route_provider.dart';
 
 /*
 |--------------------------------------------------------------------------

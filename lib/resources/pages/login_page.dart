@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app/controllers/login_controller.dart';
+import 'package:sigmun/app/controllers/login_controller.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:url_launcher/url_launcher.dart';
 
