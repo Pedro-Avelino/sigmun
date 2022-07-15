@@ -1,5 +1,5 @@
 import 'package:sigmun/resources/pages/login_page.dart';
-import 'package:sigmun/resources/pages/home_page.dart';
+import 'package:sigmun/resources/pages/home/home_page.dart';
 import '../resources/pages/forgot_password_page.dart';
 import '../resources/pages/register_page.dart';
 
@@ -18,7 +18,8 @@ import 'package:page_transition/page_transition.dart';
 */
 
 appRouter() => nyRoutes((router) {
-      router.route("/", (context) => LoginPage(title: ""));
+      router.route("/", (context) => LoginPage(title: ""),
+          transition: PageTransitionType.fade);
 
       // Add your routes here
 
