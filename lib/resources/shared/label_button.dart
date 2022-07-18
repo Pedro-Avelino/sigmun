@@ -28,9 +28,9 @@ class LabelButton extends StatelessWidget {
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
                   primary: kLabelButtonColor,
-                  shape: const CircleBorder(),
+                  shape: const BeveledRectangleBorder(),
                   fixedSize: const Size(72, 72),
-                  elevation: 0,
+                  elevation: 10,
                 ),
                 child: Icon(
                   icon,

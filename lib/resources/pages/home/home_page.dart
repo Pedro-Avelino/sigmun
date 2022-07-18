@@ -72,7 +72,9 @@ class _HomePageState extends NyState<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CircleButton(Icons.person, () {}),
+              CircleButton(Icons.person, () {
+                Navigator.pushNamed(context, '/profile_page');
+              }),
               Row(
                 children: [
                   IconButton(
@@ -124,7 +126,7 @@ class _HomePageState extends NyState<HomePage> {
                 ),
                 LabelButton(
                   'Saúde',
-                  Icons.healing,
+                  Icons.local_hospital,
                   onPressed: () => MyRouter.showBottomSheet,
                 ),
                 LabelButton(

@@ -2,6 +2,7 @@ import 'package:sigmun/resources/pages/login_page.dart';
 import 'package:sigmun/resources/pages/home/home_page.dart';
 import '../resources/pages/forgot_password_page.dart';
 import '../resources/pages/register_page.dart';
+import '../resources/pages/profile/profile_page.dart';
 
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:page_transition/page_transition.dart';
@@ -31,6 +32,9 @@ appRouter() => nyRoutes((router) {
 
       router.route("/forgot_password_page", (context) => ForgotPasswordPage(),
           transition: PageTransitionType.fade);
+
+      router.route("/profile_page", (context) => ProfilePage(),
+          transition: PageTransitionType.bottomToTop);
 
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
     });
