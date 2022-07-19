@@ -73,16 +73,26 @@ class _ProfilePageState extends NyState<ProfilePage> {
           Container(height: 1, color: kLineColor),
           Column(
             children: [
-              ProfileMenu(
-                'Editar dados do Perfil',
-                Icons.person_outline,
-                onTap: () {},
-              ),
-              ProfileMenu('Notificações', Icons.notifications_outlined),
-              ProfileMenu('Segurança', Icons.shield_outlined),
-              ProfileMenu('Ajuda', Icons.help_outline),
-              ProfileMenu('Fale Conosco', Icons.ring_volume),
-              ProfileMenu('Sobre', Icons.description_outlined),
+              ProfileMenu('Editar dados do Perfil', Icons.person_outline,
+                  onTap: () {
+                Navigator.pushNamed(context, '/edit_profile_page');
+              }),
+              ProfileMenu('Notificações', Icons.notifications_outlined,
+                  onTap: () {
+                Navigator.pushNamed(context, '/notifications_profile_page');
+              }),
+              ProfileMenu('Segurança', Icons.shield_outlined, onTap: () {
+                Navigator.pushNamed(context, '/security_profile_page');
+              }),
+              ProfileMenu('Ajuda', Icons.help_outline, onTap: () {
+                Navigator.pushNamed(context, '/help_profile_page');
+              }),
+              ProfileMenu('Fale Conosco', Icons.ring_volume, onTap: () {
+                Navigator.pushNamed(context, '/contactus_profile_page');
+              }),
+              ProfileMenu('Sobre', Icons.description_outlined, onTap: () {
+                Navigator.pushNamed(context, '/about_profile_page');
+              }),
               ProfileMenu('Sair do Aplicativo', Icons.logout, onTap: () {
                 Navigator.pushNamed(context, '/');
               }),
