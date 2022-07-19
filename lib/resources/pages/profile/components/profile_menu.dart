@@ -16,7 +16,7 @@ class ProfileMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         color: kLabelButtonColor,
         padding: EdgeInsets.symmetric(horizontal: 20),

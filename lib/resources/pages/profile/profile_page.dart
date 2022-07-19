@@ -83,7 +83,9 @@ class _ProfilePageState extends NyState<ProfilePage> {
               ProfileMenu('Ajuda', Icons.help_outline),
               ProfileMenu('Fale Conosco', Icons.ring_volume),
               ProfileMenu('Sobre', Icons.description_outlined),
-              ProfileMenu('Sair do Aplicativo', Icons.logout),
+              ProfileMenu('Sair do Aplicativo', Icons.logout, onTap: () {
+                Navigator.pushNamed(context, '/');
+              }),
             ],
           ),
           Container(height: 1, color: kLineColor),

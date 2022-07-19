@@ -75,19 +75,6 @@ class _HomePageState extends NyState<HomePage> {
               CircleButton(Icons.person, () {
                 Navigator.pushNamed(context, '/profile_page');
               }),
-              Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.logout,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/');
-                    },
-                  ),
-                ],
-              )
             ],
           ),
           const SizedBox(height: 30),
