@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../../app/controllers/contactus_profile_controller.dart';
+import '../../../../../app/controllers/contactus_profile_controller.dart';
 import 'package:sigmun/resources/themes/colors/colors.dart';
 
 class ContactUsProfilePage extends NyStatefulWidget {
@@ -36,7 +36,34 @@ class _ContactUsProfilePageState extends NyState<ContactUsProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: ListView(
+        children: [
+          ListTile(
+            title: Text('Email'),
+            subtitle: Text('ti@prefeiturademossoro.com.br'),
+            trailing: Icon(
+              Icons.email_outlined,
+              color: kPrimaryColor,
+            ),
+          ),
+          ListTile(
+            title: Text('Telefone'),
+            subtitle: Text('(84) 3333-3333'),
+            trailing: Icon(
+              Icons.phone_outlined,
+              color: kPrimaryColor,
+            ),
+          ),
+          ListTile(
+              title: Text('WhatsApp'),
+              subtitle: Text('(84) 99999-9999'),
+              trailing: Icon(
+                Icons.whatsapp,
+                color: kPrimaryColor,
+              )),
+        ],
+      )),
     );
   }
 }

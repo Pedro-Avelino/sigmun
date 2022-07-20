@@ -36,7 +36,13 @@ class _AboutProfilePageState extends NyState<AboutProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: Container(
+        child: ListTile(
+          title: Text('Versão'),
+          subtitle: Text('1.0.0'),
+        ),
+      )),
     );
   }
 }

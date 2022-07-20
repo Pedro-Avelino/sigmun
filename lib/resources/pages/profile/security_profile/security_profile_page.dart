@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../../app/controllers/security_profile_controller.dart';
+import '../../../../app/controllers/security_profile_controller.dart';
 import 'package:sigmun/resources/themes/colors/colors.dart';
 
 class SecurityProfilePage extends NyStatefulWidget {
@@ -36,7 +36,16 @@ class _SecurityProfilePageState extends NyState<SecurityProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: Container(
+        child: ListTile(
+            title: Text('Alterar senha'),
+            subtitle: Text('Senha usada para acessar o aplicativo'),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.pushNamed(context, '/security_senha_page');
+            }),
+      )),
     );
   }
 }

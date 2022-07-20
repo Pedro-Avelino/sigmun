@@ -5,10 +5,12 @@ import '../resources/pages/register_page.dart';
 import '../resources/pages/profile/profile_page.dart';
 import '../resources/pages/profile/edit_profile_page.dart';
 import '../resources/pages/profile/contactus_profile_page.dart';
-import '../resources/pages/profile/help_profile_page.dart';
+import '../resources/pages/profile/help_profile/help_profile_page.dart';
 import '../resources/pages/profile/notifications_profile_page.dart';
-import '../resources/pages/profile/security_profile_page.dart';
+import '../resources/pages/profile/security_profile/security_profile_page.dart';
 import '../resources/pages/profile/about_profile_page.dart';
+import '../resources/pages/profile/security_profile/security_profile_tabs/security_senha_page.dart';
+import '../resources/pages/profile/security_profile/security_profile_tabs/security_nova_senha_page.dart';
 
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:page_transition/page_transition.dart';
@@ -60,6 +62,13 @@ appRouter() => nyRoutes((router) {
           transition: PageTransitionType.rightToLeft);
 
       router.route("/about_profile_page", (context) => AboutProfilePage(),
+          transition: PageTransitionType.rightToLeft);
+
+      router.route("/security_senha_page", (context) => SecuritySenhaPage(),
+          transition: PageTransitionType.rightToLeft);
+
+      router.route(
+          "/security_nova_senha_page", (context) => SecurityNovaSenhaPage(),
           transition: PageTransitionType.rightToLeft);
 
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
