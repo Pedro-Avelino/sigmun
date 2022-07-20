@@ -3,12 +3,12 @@ import 'package:sigmun/resources/pages/home/home_page.dart';
 import '../resources/pages/forgot_password_page.dart';
 import '../resources/pages/register_page.dart';
 import '../resources/pages/profile/profile_page.dart';
-import '../resources/pages/profile/edit_profile_page.dart';
-import '../resources/pages/profile/contactus_profile_page.dart';
+import '../resources/pages/profile/edit_profile/edit_profile_page.dart';
+import '../resources/pages/profile/contactus_profile/contactus_profile_page.dart';
 import '../resources/pages/profile/help_profile/help_profile_page.dart';
-import '../resources/pages/profile/notifications_profile_page.dart';
+import '../resources/pages/profile/notifications_profile/notifications_profile_page.dart';
 import '../resources/pages/profile/security_profile/security_profile_page.dart';
-import '../resources/pages/profile/about_profile_page.dart';
+import '../resources/pages/profile/about_profile/about_profile_page.dart';
 import '../resources/pages/profile/security_profile/security_profile_tabs/security_senha_page.dart';
 import '../resources/pages/profile/security_profile/security_profile_tabs/security_nova_senha_page.dart';
 

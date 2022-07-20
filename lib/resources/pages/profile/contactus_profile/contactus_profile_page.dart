@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../../../../app/controllers/contactus_profile_controller.dart';
+import '../../../../../../app/controllers/contactus_profile_controller.dart';
 import 'package:sigmun/resources/themes/colors/colors.dart';
 
 class ContactUsProfilePage extends NyStatefulWidget {

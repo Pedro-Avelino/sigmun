@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
-import '../../../app/controllers/about_profile_controller.dart';
+import '../../../../app/controllers/notifications_profile_controller.dart';
 import 'package:sigmun/resources/themes/colors/colors.dart';
 
-class AboutProfilePage extends NyStatefulWidget {
-  final AboutProfileController controller = AboutProfileController();
+class NotificationsProfilePage extends NyStatefulWidget {
+  final NotificationsProfileController controller =
+      NotificationsProfileController();
 
-  AboutProfilePage({Key? key}) : super(key: key);
+  NotificationsProfilePage({Key? key}) : super(key: key);
 
   @override
-  _AboutProfilePageState createState() => _AboutProfilePageState();
+  _NotificationsProfilePageState createState() =>
+      _NotificationsProfilePageState();
 }
 
-class _AboutProfilePageState extends NyState<AboutProfilePage> {
+class _NotificationsProfilePageState extends NyState<NotificationsProfilePage> {
   @override
   init() async {}
 
@@ -26,7 +28,7 @@ class _AboutProfilePageState extends NyState<AboutProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Sobre',
+          'Notificações',
         ),
         titleTextStyle: TextStyle(color: kPrimaryColor, fontSize: 20),
         leading: IconButton(
@@ -36,13 +38,7 @@ class _AboutProfilePageState extends NyState<AboutProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(
-          child: Container(
-        child: ListTile(
-          title: Text('Versão'),
-          subtitle: Text('1.0.0'),
-        ),
-      )),
+      body: SafeArea(child: Container()),
     );
   }
 }
