@@ -73,8 +73,7 @@ class _ProfilePageState extends NyState<ProfilePage> {
           Container(height: 1, color: kLineColor),
           Column(
             children: [
-              ProfileMenu('Editar dados do Perfil', Icons.person_outline,
-                  onTap: () {
+              ProfileMenu('Editar Perfil', Icons.person_outline, onTap: () {
                 Navigator.pushNamed(context, '/edit_profile_page');
               }),
               ProfileMenu('Notificações', Icons.notifications_outlined,

@@ -38,7 +38,30 @@ class _NotificationsProfilePageState extends NyState<NotificationsProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: ListView(
+        children: [
+          ListTile(
+            title: Text('SEGURANÇA'),
+            subtitle: Text('Sua senha foi alterada recentemente.\n 16:18'),
+            leading: Icon(
+              Icons.notifications_outlined,
+              color: kPrimaryColor,
+            ),
+          ),
+          Divider(
+            color: kPrimaryColor,
+          ),
+          ListTile(
+            title: Text('SAÚDE'),
+            subtitle: Text('Sua consulta foi agendada com sucesso.\n 12:10'),
+            leading: Icon(
+              Icons.notifications_outlined,
+              color: kPrimaryColor,
+            ),
+          ),
+        ],
+      )),
     );
   }
 }
