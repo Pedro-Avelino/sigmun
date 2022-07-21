@@ -21,7 +21,15 @@ class _SecuritySenhaPageState extends NyState<SecuritySenhaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        titleTextStyle: TextStyle(color: kPrimaryColor, fontSize: 20),
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left),
+          color: kPrimaryColor,
+          iconSize: 30,
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 20.0),
