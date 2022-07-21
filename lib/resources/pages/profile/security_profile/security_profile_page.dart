@@ -41,7 +41,10 @@ class _SecurityProfilePageState extends NyState<SecurityProfilePage> {
         child: ListTile(
             title: Text('Alterar senha'),
             subtitle: Text('Senha usada para acessar o aplicativo'),
-            trailing: Icon(Icons.chevron_right),
+            trailing: Icon(
+              Icons.chevron_right,
+              color: kPrimaryColor,
+            ),
             onTap: () {
               Navigator.pushNamed(context, '/security_senha_page');
             }),

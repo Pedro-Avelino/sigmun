@@ -79,7 +79,7 @@ class _HomePageState extends NyState<HomePage> {
           ),
           const SizedBox(height: 30),
           Text(
-            'Olá, $kUsername',
+            'Oi, $kUsername',
             style: Theme.of(context)
                 .textTheme
                 .subtitle1!

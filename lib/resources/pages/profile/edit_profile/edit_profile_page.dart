@@ -36,7 +36,43 @@ class _EditProfilePageState extends NyState<EditProfilePage> {
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: SafeArea(child: Container()),
+      body: SafeArea(
+          child: ListView(
+        children: [
+          ListTile(
+            title: Text('Nome'),
+            subtitle: Text('Pepeu'),
+            trailing: Icon(
+              Icons.chevron_right,
+              color: kPrimaryColor,
+            ),
+            onTap: () {},
+          ),
+          ListTile(
+              title: Text('E-mail'),
+              subtitle: Text('pepeuavelino@gmail.com'),
+              trailing: Icon(
+                Icons.chevron_right,
+                color: kPrimaryColor,
+              ),
+              onTap: () {}),
+          ListTile(
+              title: Text('Telefone'),
+              subtitle: Text('(84) 99695-4699'),
+              trailing: Icon(
+                Icons.chevron_right,
+                color: kPrimaryColor,
+              ),
+              onTap: () {}),
+          ListTile(
+              title: Text('Endereço'),
+              trailing: Icon(
+                Icons.chevron_right,
+                color: kPrimaryColor,
+              ),
+              onTap: () {}),
+        ],
+      )),
     );
   }
 }
