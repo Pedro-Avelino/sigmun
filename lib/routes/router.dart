@@ -61,7 +61,7 @@ appRouter() => nyRoutes((router) {
           transition: PageTransitionType.rightToLeft);
 
       router.route("/help_profile_page", (context) => HelpProfilePage(),
-          transition: PageTransitionType.rightToLeft);
+          transition: PageTransitionType.bottomToTop);
 
       router.route(
           "/contactus_profile_page", (context) => ContactUsProfilePage(),

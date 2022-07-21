@@ -30,7 +30,7 @@ class _HelpProfilePageState extends NyState<HelpProfilePage> {
         ),
         titleTextStyle: TextStyle(color: kPrimaryColor, fontSize: 20),
         leading: IconButton(
-          icon: Icon(Icons.chevron_left),
+          icon: Icon(Icons.close),
           color: kPrimaryColor,
           iconSize: 30,
           onPressed: () => Navigator.pop(context),

@@ -117,12 +117,14 @@ class _HomePageState extends NyState<HomePage> {
                 LabelButton(
                   '1Doc',
                   Icons.contact_page_outlined,
-                  onPressed: () => MyRouter.showBottomSheet,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/help_profile_page'),
                 ),
                 LabelButton(
                   'Ajuda',
                   Icons.help,
-                  onPressed: () => MyRouter.showBottomSheet,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/help_profile_page'),
                 ),
                 const SizedBox(width: 20),
               ],

@@ -49,7 +49,7 @@ class Notice extends StatelessWidget {
   Widget _getColumText(tittle, date, description) {
     return new Expanded(
         child: new Container(
-      margin: new EdgeInsets.all(10.0),
+      margin: new EdgeInsets.all(5.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

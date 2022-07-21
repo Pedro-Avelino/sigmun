@@ -16,7 +16,6 @@ class _NoticeListPageState extends State<NoticeList> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(),
       body: new Container(
         child: _getListViewWidget(),
       ),
