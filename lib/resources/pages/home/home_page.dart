@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 import '../../../app/controllers/home_controller.dart';
-import 'package:sigmun/core/app_state.dart';
 import 'package:sigmun/core/constants.dart';
 import 'package:sigmun/core/router.dart';
 import 'package:sigmun/resources/pages/home/cards/services_card.dart';
@@ -9,7 +8,6 @@ import 'package:sigmun/resources/pages/home/cards/news_card.dart';
 import 'package:sigmun/resources/shared/circle_button.dart';
 import 'package:sigmun/resources/shared/label_button.dart';
 import 'package:sigmun/resources/themes/colors/colors.dart';
-import 'package:page_transition/page_transition.dart';
 
 class HomePage extends NyStatefulWidget {
   final HomeController controller = HomeController();

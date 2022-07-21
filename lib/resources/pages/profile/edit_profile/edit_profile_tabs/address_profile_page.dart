@@ -41,6 +41,7 @@ class _AddressProfilePageState extends NyState<AddressProfilePage> {
               SizedBox(height: 50),
               TextFormField(
                 cursorColor: kPrimaryColor,
+                keyboardType: TextInputType.number,
                 initialValue: '59631450',
                 decoration: InputDecoration(
                   labelText: 'CEP',
@@ -80,6 +81,7 @@ class _AddressProfilePageState extends NyState<AddressProfilePage> {
               ),
               TextFormField(
                 cursorColor: kPrimaryColor,
+                keyboardType: TextInputType.number,
                 initialValue: '08',
                 decoration: InputDecoration(
                   labelText: 'Número',
