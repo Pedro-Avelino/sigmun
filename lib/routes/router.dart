@@ -11,6 +11,10 @@ import '../resources/pages/profile/security_profile/security_profile_page.dart';
 import '../resources/pages/profile/about_profile/about_profile_page.dart';
 import '../resources/pages/profile/security_profile/security_profile_tabs/security_senha_page.dart';
 import '../resources/pages/profile/security_profile/security_profile_tabs/security_nova_senha_page.dart';
+import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/phone_profile_page.dart';
+import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/name_profile_page.dart';
+import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/email_profile_page.dart';
+import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/address_profile_page.dart';
 
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:page_transition/page_transition.dart';
@@ -41,6 +45,8 @@ appRouter() => nyRoutes((router) {
       router.route("/forgot_password_page", (context) => ForgotPasswordPage(),
           transition: PageTransitionType.fade);
 
+//ROTAS DE PERFIL---------------------------------------------------------------------------------------------------------------------
+
       router.route("/profile_page", (context) => ProfilePage(),
           transition: PageTransitionType.bottomToTop);
 
@@ -70,6 +76,19 @@ appRouter() => nyRoutes((router) {
       router.route(
           "/security_nova_senha_page", (context) => SecurityNovaSenhaPage(),
           transition: PageTransitionType.rightToLeft);
+
+      router.route("/address_profile_page", (context) => AddressProfilePage(),
+          transition: PageTransitionType.bottomToTop);
+
+      router.route("/email_profile_page", (context) => EmailProfilePage(),
+          transition: PageTransitionType.bottomToTop);
+
+      router.route("/name_profile_page", (context) => NameProfilePage(),
+          transition: PageTransitionType.bottomToTop);
+
+      router.route("/phone_profile_page", (context) => PhoneProfilePage(),
+          transition: PageTransitionType.bottomToTop);
+//---------------------------------------------------------------------------------------------------------------------
 
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
     });

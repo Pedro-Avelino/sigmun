@@ -46,7 +46,9 @@ class _EditProfilePageState extends NyState<EditProfilePage> {
               Icons.chevron_right,
               color: kPrimaryColor,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/name_profile_page');
+            },
           ),
           ListTile(
               title: Text('E-mail'),
@@ -55,7 +57,9 @@ class _EditProfilePageState extends NyState<EditProfilePage> {
                 Icons.chevron_right,
                 color: kPrimaryColor,
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.pushNamed(context, '/email_profile_page');
+              }),
           ListTile(
               title: Text('Telefone'),
               subtitle: Text('(84) 99695-4699'),
@@ -63,14 +67,18 @@ class _EditProfilePageState extends NyState<EditProfilePage> {
                 Icons.chevron_right,
                 color: kPrimaryColor,
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.pushNamed(context, '/phone_profile_page');
+              }),
           ListTile(
               title: Text('Endereço'),
               trailing: Icon(
                 Icons.chevron_right,
                 color: kPrimaryColor,
               ),
-              onTap: () {}),
+              onTap: () {
+                Navigator.pushNamed(context, '/address_profile_page');
+              }),
         ],
       )),
     );
