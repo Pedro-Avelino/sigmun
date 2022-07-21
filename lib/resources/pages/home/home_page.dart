@@ -104,21 +104,20 @@ class _HomePageState extends NyState<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(width: 20),
-                LabelButton(
-                  'Todos os Serviços',
-                  Icons.apps,
-                  onPressed: () => MyRouter.showBottomSheet,
-                ),
+                LabelButton('Todos os Serviços', Icons.apps,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/inactive_page')),
                 LabelButton(
                   'Saúde',
                   Icons.local_hospital,
-                  onPressed: () => MyRouter.showBottomSheet,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/inactive_page'),
                 ),
                 LabelButton(
                   '1Doc',
                   Icons.contact_page_outlined,
                   onPressed: () =>
-                      Navigator.pushNamed(context, '/help_profile_page'),
+                      Navigator.pushNamed(context, '/inactive_page'),
                 ),
                 LabelButton(
                   'Ajuda',

@@ -15,6 +15,7 @@ import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/ph
 import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/name_profile_page.dart';
 import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/email_profile_page.dart';
 import 'package:sigmun/resources/pages/profile/edit_profile/edit_profile_tabs/address_profile_page.dart';
+import 'package:sigmun/resources/pages/inactive_page.dart';
 
 import 'package:nylo_framework/nylo_framework.dart';
 import 'package:page_transition/page_transition.dart';
@@ -89,6 +90,9 @@ appRouter() => nyRoutes((router) {
       router.route("/phone_profile_page", (context) => PhoneProfilePage(),
           transition: PageTransitionType.bottomToTop);
 //---------------------------------------------------------------------------------------------------------------------
+
+      router.route("/inactive_page", (context) => InactivePage(),
+          transition: PageTransitionType.bottomToTop);
 
       // router.route("/new-page", (context) => NewPage(), transition: PageTransitionType.fade);
     });
