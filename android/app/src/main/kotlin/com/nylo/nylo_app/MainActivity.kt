@@ -1,4 +1,4 @@
-package com.nylo.nylo_app
+package com.sigmun.app_app
 
 import io.flutter.embedding.android.FlutterActivity
 
